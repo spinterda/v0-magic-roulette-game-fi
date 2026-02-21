@@ -9,11 +9,12 @@ export default function PlayPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-4">
-            Choose Your <span className="text-primary">Challenge</span>
+          <h1 className="text-6xl sm:text-7xl font-black text-foreground mb-4">
+            <span className="text-primary">PICK YOUR</span><br/>
+            POISON
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Select your game mode and enter the saloon. Will you face a single opponent or lead your team to victory?
+          <p className="text-xl text-foreground font-bold max-w-2xl mx-auto">
+            Solo duel or squad up. Either way, someone's gonna lose big.
           </p>
         </div>
 
@@ -24,28 +25,28 @@ export default function PlayPage() {
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/0 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="relative p-8 rounded-lg border-2 border-primary/50 bg-card hover:bg-muted transition-colors">
               <div className="mb-6">
-                <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-4">
-                  <span className="text-2xl">⚡</span>
+                <div className="text-5xl mb-4">
+                  🔫
                 </div>
-                <h2 className="text-3xl font-bold text-foreground mb-2">1v1 Duel</h2>
-                <p className="text-muted-foreground">
-                  Go head-to-head with another player. Pure skill, pure stakes.
+                <h2 className="text-4xl font-black text-foreground mb-2">GUNSLINGER</h2>
+                <p className="text-muted-foreground font-bold">
+                  One chamber. Two degens. One SOL winner.
                 </p>
               </div>
 
               {/* Features */}
               <div className="space-y-3 mb-8">
                 <div className="flex items-center gap-3">
-                  <Zap size={18} className="text-primary" />
-                  <span className="text-sm text-foreground">Instant matchmaking</span>
+                  <span className="text-lg">⚡</span>
+                  <span className="text-sm text-foreground font-bold">Instant matchmaking</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Zap size={18} className="text-primary" />
-                  <span className="text-sm text-foreground">Best of 3 rounds</span>
+                  <span className="text-lg">🎯</span>
+                  <span className="text-sm text-foreground font-bold">Best of 3 chambers</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Zap size={18} className="text-primary" />
-                  <span className="text-sm text-foreground">Direct SOL transfers</span>
+                  <span className="text-lg">💰</span>
+                  <span className="text-sm text-foreground font-bold">Direct SOL to wallet</span>
                 </div>
               </div>
 
@@ -68,9 +69,9 @@ export default function PlayPage() {
               {/* CTA */}
               <Link
                 href="/play/1v1"
-                className="w-full px-6 py-3 rounded bg-primary hover:bg-primary/90 text-primary-foreground font-semibold flex items-center justify-center gap-2 transition-all group-hover:gap-3"
+                className="w-full px-6 py-3 rounded bg-primary hover:bg-primary/90 text-primary-foreground font-black text-lg flex items-center justify-center gap-2 transition-all group-hover:gap-3 uppercase"
               >
-                Find Opponent
+                🔫 DRAW
                 <ArrowRight size={20} />
               </Link>
             </div>
@@ -81,28 +82,28 @@ export default function PlayPage() {
             <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-accent/0 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="relative p-8 rounded-lg border-2 border-accent/50 bg-card hover:bg-muted transition-colors">
               <div className="mb-6">
-                <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center mb-4">
-                  <span className="text-2xl">👥</span>
+                <div className="text-5xl mb-4">
+                  🤠
                 </div>
-                <h2 className="text-3xl font-bold text-foreground mb-2">2v2 Team</h2>
-                <p className="text-muted-foreground">
-                  Team up with friends or be matched with teammates. Strategy meets skill.
+                <h2 className="text-4xl font-black text-foreground mb-2">POSSE</h2>
+                <p className="text-muted-foreground font-bold">
+                  Squad up with homies. Ride together, eat together.
                 </p>
               </div>
 
               {/* Features */}
               <div className="space-y-3 mb-8">
                 <div className="flex items-center gap-3">
-                  <Users size={18} className="text-accent" />
-                  <span className="text-sm text-foreground">Squad-based matchmaking</span>
+                  <span className="text-lg">👥</span>
+                  <span className="text-sm text-foreground font-bold">Find or create squad</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Users size={18} className="text-accent" />
-                  <span className="text-sm text-foreground">Team rankings & rewards</span>
+                  <span className="text-lg">🏆</span>
+                  <span className="text-sm text-foreground font-bold">Team leaderboard battles</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Users size={18} className="text-accent" />
-                  <span className="text-sm text-foreground">Shared prize pool</span>
+                  <span className="text-lg">💎</span>
+                  <span className="text-sm text-foreground font-bold">Shared treasury & rewards</span>
                 </div>
               </div>
 
@@ -125,9 +126,9 @@ export default function PlayPage() {
               {/* CTA */}
               <Link
                 href="/play/2v2"
-                className="w-full px-6 py-3 rounded bg-accent hover:bg-accent/90 text-accent-foreground font-semibold flex items-center justify-center gap-2 transition-all group-hover:gap-3"
+                className="w-full px-6 py-3 rounded bg-secondary hover:bg-secondary/90 text-secondary-foreground font-black text-lg flex items-center justify-center gap-2 transition-all group-hover:gap-3 uppercase"
               >
-                Form or Join Team
+                🤠 RIDE
                 <ArrowRight size={20} />
               </Link>
             </div>

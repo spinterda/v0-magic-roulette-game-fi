@@ -10,72 +10,89 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-card to-background py-20 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20 sm:py-32 border-b border-border">
+        <div 
+          className="absolute inset-0 z-0 opacity-20"
+          style={{
+            backgroundImage: 'url(/hero-saloon.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="absolute inset-0 z-1 bg-gradient-to-r from-background via-background/80 to-transparent" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <p className="text-primary font-semibold text-sm uppercase tracking-wide">
-                  🤠 Welcome to the Saloon
+                <p className="text-primary font-black text-sm uppercase tracking-widest animate-pulse">
+                  ☠️ DEGEN ALERT • PURE ADRENALINE
                 </p>
-                <h1 className="text-5xl sm:text-6xl font-bold text-foreground leading-tight">
-                  Magic <span className="text-primary">Roulette</span>
+                <h1 className="text-6xl sm:text-7xl font-black text-foreground leading-tight">
+                  <span className="text-primary">SPIN</span><br/>
+                  TO<br/>
+                  <span className="text-accent">WIN</span>
                 </h1>
-                <p className="text-xl text-muted-foreground max-w-md">
-                  High-stakes Russian Roulette on Solana. Spin the cylinder, test your nerve, claim your glory.
+                <p className="text-xl text-foreground font-bold max-w-md">
+                  Solana's most degenerate roulette. 50/50 odds. 100% on-chain. Diamond hands or RIP.
                 </p>
               </div>
 
               {/* Game Modes */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-8">
                 <Link
                   href="/play/1v1"
-                  className="group p-6 rounded-lg border border-primary/20 hover:border-primary bg-card hover:bg-muted transition-all"
+                  className="group p-6 rounded-lg border-2 border-primary/40 hover:border-primary bg-card hover:bg-primary/5 transition-all active:scale-95"
                 >
-                  <h3 className="font-bold text-lg text-foreground mb-2">1v1 Duel</h3>
+                  <div className="text-3xl mb-3">🔫</div>
+                  <h3 className="font-black text-lg text-foreground mb-2">GUNSLINGER</h3>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Head-to-head high-stakes competition
+                    1v1 Wild West Duel
                   </p>
-                  <span className="inline-block text-primary group-hover:translate-x-1 transition-transform">
-                    Play Now →
+                  <span className="inline-block text-primary font-bold group-hover:translate-x-2 transition-transform">
+                    DRAW →
                   </span>
                 </Link>
 
                 <Link
                   href="/play/2v2"
-                  className="group p-6 rounded-lg border border-accent/20 hover:border-accent bg-card hover:bg-muted transition-all"
+                  className="group p-6 rounded-lg border-2 border-secondary/40 hover:border-secondary bg-card hover:bg-secondary/5 transition-all active:scale-95"
                 >
-                  <h3 className="font-bold text-lg text-foreground mb-2">2v2 Team</h3>
+                  <div className="text-3xl mb-3">🤠</div>
+                  <h3 className="font-black text-lg text-foreground mb-2">POSSE</h3>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Squad-based gameplay and team rankings
+                    2v2 Squad Showdown
                   </p>
-                  <span className="inline-block text-accent group-hover:translate-x-1 transition-transform">
-                    Play Now →
+                  <span className="inline-block text-secondary font-bold group-hover:translate-x-2 transition-transform">
+                    RIDE →
                   </span>
                 </Link>
               </div>
 
               {/* CTA Button */}
               <div>
-                <button className="gun-metal-button w-full sm:w-auto">
-                  Connect Wallet to Play
+                <button className="gun-metal-button w-full sm:w-auto text-lg font-black uppercase">
+                  ⚡ CONNECT & DEGEN
                 </button>
               </div>
 
               {/* Quick Stats */}
               <div className="grid grid-cols-3 gap-4 pt-8 border-t border-border">
                 <div>
-                  <p className="text-2xl font-bold text-primary">$2.4M</p>
-                  <p className="text-sm text-muted-foreground">Total Pot</p>
+                  <p className="text-3xl font-black text-primary">💰</p>
+                  <p className="text-lg font-black text-foreground">$12.3M</p>
+                  <p className="text-xs text-muted-foreground font-bold">TOTAL WAGERED</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-primary">12.5K+</p>
-                  <p className="text-sm text-muted-foreground">Active Players</p>
+                  <p className="text-3xl font-black text-secondary">👥</p>
+                  <p className="text-lg font-black text-foreground">47.2K</p>
+                  <p className="text-xs text-muted-foreground font-bold">DEGEN ARMY</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-primary">48h</p>
-                  <p className="text-sm text-muted-foreground">Season Ends</p>
+                  <p className="text-3xl font-black text-accent">📈</p>
+                  <p className="text-lg font-black text-foreground">1.8k SOL</p>
+                  <p className="text-xs text-muted-foreground font-bold">AVG PAYOUT</p>
                 </div>
               </div>
             </div>
@@ -96,52 +113,55 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-foreground mb-12 text-center">
-            Why Play Magic Roulette?
+          <h2 className="text-5xl font-black text-foreground mb-4 text-center">
+            WHY YOU NEED THIS
           </h2>
+          <p className="text-center text-muted-foreground font-bold mb-12 text-lg">
+            The most degenerate, thrilling, and profitable roulette experience on Solana
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Real Stakes',
-                description: 'Win SOL and tokens with every successful chamber selection. True risk, true reward.',
+                title: '💸 REAL MONEY',
+                description: 'Win actual SOL instantly. No fake tokens, no BS—direct to your wallet.',
                 icon: '💰',
               },
               {
-                title: 'Global Leaderboard',
-                description: 'Compete against players worldwide. Earn badges and claim your rank as a legendary outlaw.',
-                icon: '🏆',
-              },
-              {
-                title: 'Fair & Transparent',
-                description: 'Built on Solana blockchain. Verifiable outcomes, zero house manipulation.',
+                title: '🚀 LIGHTNING FAST',
+                description: 'Solana speed. Transactions confirm in milliseconds. Settle and play again.',
                 icon: '⚡',
               },
               {
-                title: 'Instant Settlements',
-                description: 'Winnings claimed instantly to your wallet. No waiting, no middlemen.',
+                title: '📊 PROVABLY FAIR',
+                description: 'On-chain verification. No house tricks. Math cannot lie.',
+                icon: '🔐',
+              },
+              {
+                title: '🎯 INSTANT PAYOUTS',
+                description: 'No waiting. No middlemen. Your W is your W immediately.',
                 icon: '✨',
               },
               {
-                title: 'Team Play',
-                description: '2v2 team battles for squad-based strategy and competitive team rankings.',
-                icon: '👥',
+                title: '👑 FLEX GLOBAL',
+                description: 'Climb the leaderboard. Earn badges. Become a legend.',
+                icon: '🏆',
               },
               {
-                title: 'Reward Pool',
-                description: 'Weekly prize distributions. Climb the ranks and unlock exclusive rewards.',
+                title: '💎 DEGEN REWARDS',
+                description: 'Weekly prize pools. Seasons. Exclusive NFT badges. Keep leveling up.',
                 icon: '🎁',
               },
             ].map((feature, i) => (
               <div
                 key={i}
-                className="p-6 rounded-lg border border-border bg-card hover:bg-muted transition-colors group"
+                className="p-6 rounded-lg border-2 border-primary/20 hover:border-primary bg-card hover:bg-primary/5 transition-all group cursor-pointer"
               >
-                <p className="text-4xl mb-4">{feature.icon}</p>
-                <h3 className="font-bold text-lg text-foreground mb-2">
+                <p className="text-5xl mb-4">{feature.icon}</p>
+                <h3 className="font-black text-lg text-foreground mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-muted-foreground">{feature.description}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -151,28 +171,31 @@ export default function Home() {
       {/* Recent Winners Section */}
       <section className="py-20 bg-card border-y border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-foreground mb-12 text-center">
-            Recent Legends
+          <h2 className="text-5xl font-black text-foreground mb-4 text-center">
+            TODAY'S W's
           </h2>
+          <p className="text-center text-muted-foreground font-bold mb-12">
+            These degenerates got lucky. You could be next.
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
-              { rank: '🥇 1st', player: 'SheriffSolana', winnings: '52.3 SOL', streak: '8 wins' },
-              { rank: '🥈 2nd', player: 'OutlawWinston', winnings: '48.7 SOL', streak: '6 wins' },
-              { rank: '🥉 3rd', player: 'RevolverRick', winnings: '45.2 SOL', streak: '5 wins' },
-              { rank: '#4', player: 'SaloonSally', winnings: '42.8 SOL', streak: '4 wins' },
+              { rank: '👑', player: '7QmK...xFj2', winnings: '234.5 SOL', profit: '+$42,340' },
+              { rank: '🔥', player: 'SolWarrior', winnings: '168.2 SOL', profit: '+$31,250' },
+              { rank: '💎', player: 'OreSupplyGang', winnings: '145.8 SOL', profit: '+$27,890' },
+              { rank: '🚀', player: 'BullMarketBob', winnings: '127.3 SOL', profit: '+$23,450' },
             ].map((winner, i) => (
               <div
                 key={i}
-                className="p-6 rounded-lg bg-background border border-border hover:border-primary transition-colors group"
+                className="p-6 rounded-lg bg-background border-2 border-primary/30 hover:border-primary transition-all group hover:scale-105"
               >
-                <p className="text-xl font-bold text-primary mb-2">{winner.rank}</p>
-                <h3 className="font-bold text-lg text-foreground mb-2">
+                <p className="text-4xl mb-3">{winner.rank}</p>
+                <h3 className="font-black text-lg text-foreground mb-2 truncate">
                   {winner.player}
                 </h3>
-                <div className="space-y-1 text-sm text-muted-foreground">
-                  <p>Winnings: <span className="text-primary font-semibold">{winner.winnings}</span></p>
-                  <p>Streak: <span className="text-accent font-semibold">{winner.streak}</span></p>
+                <div className="space-y-2 text-sm">
+                  <p className="text-muted-foreground">Won: <span className="text-primary font-black">{winner.winnings}</span></p>
+                  <p className="text-accent font-black">{winner.profit}</p>
                 </div>
               </div>
             ))}
@@ -181,23 +204,33 @@ export default function Home() {
       </section>
 
       {/* CTA Footer */}
-      <section className="py-20 bg-background">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
-            Ready to Test Your Nerve?
+      <section className="py-20 bg-background relative overflow-hidden">
+        <div 
+          className="absolute inset-0 z-0 opacity-15"
+          style={{
+            backgroundImage: 'url(/hero-outlaw.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="absolute inset-0 z-1 bg-gradient-to-t from-background via-background/60 to-background/30" />
+        
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-6xl font-black text-foreground mb-4">
+            FORTUNE WAITS NO ONE
           </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of players competing for glory and fortune on the Solana blockchain.
+          <p className="text-lg text-foreground font-bold mb-8 max-w-2xl mx-auto">
+            47,000+ degens spinning daily on Solana. Will you join the legend?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="gun-metal-button">
-              Connect Wallet
+            <button className="gun-metal-button text-lg font-black uppercase px-8 py-4">
+              ⚡ SPIN NOW
             </button>
             <Link
               href="/how-it-works"
-              className="px-6 py-3 rounded border border-primary text-primary hover:bg-primary/10 transition-colors font-semibold"
+              className="px-8 py-4 rounded border-2 border-primary text-primary hover:bg-primary/20 transition-colors font-black uppercase"
             >
-              Learn How to Play
+              📖 LEARN THE GAME
             </Link>
           </div>
         </div>

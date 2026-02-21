@@ -14,6 +14,7 @@ export function Navbar() {
     { href: '/rewards', label: 'Rewards' },
     { href: '/how-it-works', label: 'How It Works' },
     { href: '/profile', label: 'Profile' },
+    { href: 'https://docs.magic-roulette.sol', label: 'Whitepaper', external: true },
   ];
 
   return (
@@ -21,25 +22,40 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="text-2xl font-bold text-primary">
-              🔫
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="text-3xl font-black animate-bounce">
+              💀
             </div>
-            <span className="hidden sm:inline font-bold text-lg text-foreground">
-              Magic Roulette
+            <span className="hidden sm:inline font-black text-xl text-primary group-hover:text-accent transition-colors">
+              MAGIC ROULETTE
+            </span>
+            <span className="hidden md:inline text-xs text-muted-foreground font-bold ml-1">
+              DEGEN EDITION
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                {item.label}
-              </Link>
+              item.external ? (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors font-semibold"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {item.label}
+                </Link>
+              )
             ))}
             <button className="gun-metal-button text-sm">
               Connect Wallet
@@ -59,14 +75,26 @@ export function Navbar() {
         {isOpen && (
           <div className="md:hidden pb-4 space-y-2 border-t border-border pt-4">
             {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="block px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-muted rounded transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.label}
-              </Link>
+              item.external ? (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-muted rounded transition-colors font-semibold"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="block px-4 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-muted rounded transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              )
             ))}
             <button className="w-full gun-metal-button text-sm">
               Connect Wallet

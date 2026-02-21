@@ -90,44 +90,45 @@ export default function LeaderboardPage() {
     <main className="min-h-screen bg-background py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-12">
-          <h1 className="text-5xl sm:text-6xl font-bold text-foreground mb-4">
-            The <span className="text-primary">Leaderboard</span>
+        <div className="text-center mb-16">
+          <h1 className="text-6xl sm:text-7xl font-black text-foreground mb-4">
+            <span className="text-primary">HALL OF</span><br/>
+            <span className="text-accent">LEGENDS</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl">
-            Compete for glory and fortune. Track your progress against the best players in the saloon.
+          <p className="text-lg text-foreground font-bold max-w-2xl mx-auto">
+            Where the real degens duke it out. Rise, dominate, or fall.
           </p>
         </div>
 
         {/* Stats Overview */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-          <div className="p-6 rounded-lg border border-border bg-card">
-            <p className="text-xs text-muted-foreground uppercase tracking-wide mb-2">
-              Total Prize Pool
+          <div className="p-6 rounded-lg border-2 border-primary/30 bg-card hover:border-primary transition-all">
+            <p className="text-xs text-muted-foreground uppercase tracking-wide font-bold mb-2">
+              💰 Prize Pool
             </p>
-            <p className="text-3xl font-bold text-primary">$2.4M+</p>
-            <p className="text-xs text-muted-foreground mt-2">SOL Distributed</p>
+            <p className="text-4xl font-black text-primary">$12.3M</p>
+            <p className="text-xs text-muted-foreground mt-2 font-bold">TOTAL AT STAKE</p>
           </div>
-          <div className="p-6 rounded-lg border border-border bg-card">
-            <p className="text-xs text-muted-foreground uppercase tracking-wide mb-2">
-              Active Players
+          <div className="p-6 rounded-lg border-2 border-secondary/30 bg-card hover:border-secondary transition-all">
+            <p className="text-xs text-muted-foreground uppercase tracking-wide font-bold mb-2">
+              👥 Degens
             </p>
-            <p className="text-3xl font-bold text-accent">12.5K+</p>
-            <p className="text-xs text-muted-foreground mt-2">This season</p>
+            <p className="text-4xl font-black text-secondary">47.2K</p>
+            <p className="text-xs text-muted-foreground mt-2 font-bold">SPINNING NOW</p>
           </div>
-          <div className="p-6 rounded-lg border border-border bg-card">
-            <p className="text-xs text-muted-foreground uppercase tracking-wide mb-2">
-              Avg Match Duration
+          <div className="p-6 rounded-lg border-2 border-primary/30 bg-card hover:border-primary transition-all">
+            <p className="text-xs text-muted-foreground uppercase tracking-wide font-bold mb-2">
+              ⚡ Avg Speed
             </p>
-            <p className="text-3xl font-bold text-primary">3m 42s</p>
-            <p className="text-xs text-muted-foreground mt-2">1v1 duels</p>
+            <p className="text-4xl font-black text-primary">2.3s</p>
+            <p className="text-xs text-muted-foreground mt-2 font-bold">PER SPIN</p>
           </div>
-          <div className="p-6 rounded-lg border border-border bg-card">
-            <p className="text-xs text-muted-foreground uppercase tracking-wide mb-2">
-              Your Rank
+          <div className="p-6 rounded-lg border-2 border-accent/30 bg-card hover:border-accent transition-all">
+            <p className="text-xs text-muted-foreground uppercase tracking-wide font-bold mb-2">
+              📈 Your Rank
             </p>
-            <p className="text-3xl font-bold text-accent">24</p>
-            <p className="text-xs text-muted-foreground mt-2">Top 0.2%</p>
+            <p className="text-4xl font-black text-accent">#42</p>
+            <p className="text-xs text-muted-foreground mt-2 font-bold">TOP 0.1%</p>
           </div>
         </div>
 

@@ -4,74 +4,74 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #0a0805;
-  --foreground: #f5f0ea;
-  --card: #1a1410;
-  --card-foreground: #f5f0ea;
-  --popover: #1a1410;
-  --popover-foreground: #f5f0ea;
-  --primary: #d4853c;
-  --primary-foreground: #0a0805;
-  --secondary: #8b4513;
-  --secondary-foreground: #f5f0ea;
-  --muted: #3a3228;
-  --muted-foreground: #a89f94;
-  --accent: #c41e3a;
-  --accent-foreground: #f5f0ea;
-  --destructive: #c41e3a;
-  --destructive-foreground: #f5f0ea;
-  --border: #2a2218;
-  --input: #1a1410;
-  --ring: #d4853c;
-  --chart-1: #d4853c;
-  --chart-2: #8b4513;
-  --chart-3: #c41e3a;
-  --chart-4: #f5a623;
-  --chart-5: #2a2218;
+  --background: #050505;
+  --foreground: #ffffff;
+  --card: #0a0a0a;
+  --card-foreground: #ffffff;
+  --popover: #0a0a0a;
+  --popover-foreground: #ffffff;
+  --primary: #14f195;
+  --primary-foreground: #000000;
+  --secondary: #9945ff;
+  --secondary-foreground: #ffffff;
+  --muted: #1a1a1a;
+  --muted-foreground: #888888;
+  --accent: #ff006e;
+  --accent-foreground: #ffffff;
+  --destructive: #ff006e;
+  --destructive-foreground: #ffffff;
+  --border: #1a1a1a;
+  --input: #0a0a0a;
+  --ring: #14f195;
+  --chart-1: #14f195;
+  --chart-2: #9945ff;
+  --chart-3: #ff006e;
+  --chart-4: #ffa500;
+  --chart-5: #1a1a1a;
   --radius: 0.5rem;
-  --sidebar: #0a0805;
-  --sidebar-foreground: #f5f0ea;
-  --sidebar-primary: #d4853c;
-  --sidebar-primary-foreground: #0a0805;
-  --sidebar-accent: #c41e3a;
-  --sidebar-accent-foreground: #f5f0ea;
-  --sidebar-border: #2a2218;
-  --sidebar-ring: #d4853c;
+  --sidebar: #050505;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #14f195;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #9945ff;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #1a1a1a;
+  --sidebar-ring: #14f195;
 }
 
 .dark {
-  --background: #0a0805;
-  --foreground: #f5f0ea;
-  --card: #1a1410;
-  --card-foreground: #f5f0ea;
-  --popover: #1a1410;
-  --popover-foreground: #f5f0ea;
-  --primary: #d4853c;
-  --primary-foreground: #0a0805;
-  --secondary: #8b4513;
-  --secondary-foreground: #f5f0ea;
-  --muted: #3a3228;
-  --muted-foreground: #a89f94;
-  --accent: #c41e3a;
-  --accent-foreground: #f5f0ea;
-  --destructive: #c41e3a;
-  --destructive-foreground: #f5f0ea;
-  --border: #2a2218;
-  --input: #1a1410;
-  --ring: #d4853c;
-  --chart-1: #d4853c;
-  --chart-2: #8b4513;
-  --chart-3: #c41e3a;
-  --chart-4: #f5a623;
-  --chart-5: #2a2218;
-  --sidebar: #0a0805;
-  --sidebar-foreground: #f5f0ea;
-  --sidebar-primary: #d4853c;
-  --sidebar-primary-foreground: #0a0805;
-  --sidebar-accent: #c41e3a;
-  --sidebar-accent-foreground: #f5f0ea;
-  --sidebar-border: #2a2218;
-  --sidebar-ring: #d4853c;
+  --background: #050505;
+  --foreground: #ffffff;
+  --card: #0a0a0a;
+  --card-foreground: #ffffff;
+  --popover: #0a0a0a;
+  --popover-foreground: #ffffff;
+  --primary: #14f195;
+  --primary-foreground: #000000;
+  --secondary: #9945ff;
+  --secondary-foreground: #ffffff;
+  --muted: #1a1a1a;
+  --muted-foreground: #888888;
+  --accent: #ff006e;
+  --accent-foreground: #ffffff;
+  --destructive: #ff006e;
+  --destructive-foreground: #ffffff;
+  --border: #1a1a1a;
+  --input: #0a0a0a;
+  --ring: #14f195;
+  --chart-1: #14f195;
+  --chart-2: #9945ff;
+  --chart-3: #ff006e;
+  --chart-4: #ffa500;
+  --chart-5: #1a1a1a;
+  --sidebar: #050505;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #14f195;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #9945ff;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #1a1a1a;
+  --sidebar-ring: #14f195;
 }
 
 @theme inline {
@@ -144,6 +144,18 @@
   .flicker {
     animation: flicker 0.3s ease-in-out;
   }
+
+  .glow-text {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  .slide-in {
+    animation: slide-up 0.6s ease-out;
+  }
+
+  .degen-shake {
+    animation: degen-shake 0.2s ease-in-out;
+  }
 }
 
 @keyframes revolver-spin {
@@ -187,6 +199,38 @@
   }
   50% {
     opacity: 0.7;
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);
+  }
+  50% {
+    text-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes degen-shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(2px);
   }
 }
 
