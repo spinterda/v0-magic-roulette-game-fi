@@ -8,12 +8,9 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { href: '/', label: 'Home' },
     { href: '/play', label: 'Play' },
     { href: '/leaderboard', label: 'Leaderboard' },
     { href: '/rewards', label: 'Rewards' },
-    { href: '/how-it-works', label: 'How It Works' },
-    { href: '/profile', label: 'Profile' },
     { href: 'https://docs.magic-roulette.sol', label: 'Whitepaper', external: true },
   ];
 

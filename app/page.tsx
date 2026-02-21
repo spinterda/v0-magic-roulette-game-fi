@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 sm:py-32 border-b border-border">
+      <section className="relative overflow-hidden py-24 sm:py-40 border-b border-border">
         <div 
           className="absolute inset-0 z-0 opacity-20"
           style={{
@@ -22,20 +22,19 @@ export default function Home() {
         <div className="absolute inset-0 z-1 bg-gradient-to-r from-background via-background/80 to-transparent" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
-            <div className="space-y-8">
-              <div className="space-y-4">
+            <div className="space-y-10">
+              <div className="space-y-6">
                 <p className="text-primary font-black text-sm uppercase tracking-widest animate-pulse">
                   ☠️ DEGEN ALERT • PURE ADRENALINE
                 </p>
-                <h1 className="text-6xl sm:text-7xl font-black text-foreground leading-tight">
+                <h1 className="text-7xl sm:text-8xl font-black text-foreground leading-none">
                   <span className="text-primary">SPIN</span><br/>
-                  TO<br/>
                   <span className="text-accent">WIN</span>
                 </h1>
-                <p className="text-xl text-foreground font-bold max-w-md">
-                  Solana's most degenerate roulette. 50/50 odds. 100% on-chain. Diamond hands or RIP.
+                <p className="text-lg text-foreground font-bold pt-4 max-w-lg">
+                  Solana's most degenerate roulette on chain.
                 </p>
               </div>
 
